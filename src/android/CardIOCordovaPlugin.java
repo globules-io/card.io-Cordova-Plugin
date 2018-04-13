@@ -88,7 +88,7 @@ public class CardIOCordovaPlugin extends CordovaPlugin {
 
     // onActivityResult
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
-        if (REQUEST_CARD_SCAN == requestCode || resultCode == CardIOActivity.EXTRA_SUPPRESS_CONFIRMATION) {
+        if (REQUEST_CARD_SCAN == requestCode || resultCode == CardIOActivity.RESULT_CONFIRMATION_SUPPRESSED) {
             if (resultCode == CardIOActivity.RESULT_CARD_INFO) {
                 CreditCard scanResult = null;
                 if (intent.hasExtra(CardIOActivity.EXTRA_SCAN_RESULT)) {
